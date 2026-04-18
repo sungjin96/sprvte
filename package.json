@@ -1,0 +1,41 @@
+{
+  "name": "game-assets-maker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "worker": "tsx watch src/workers/assetWorker.ts"
+  },
+  "dependencies": {
+    "next": "15.3.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "drizzle-orm": "^0.41.0",
+    "pg": "^8.13.3",
+    "bullmq": "^5.38.0",
+    "ioredis": "^5.4.2",
+    "replicate": "^1.0.1",
+    "sharp": "^0.33.5",
+    "zod": "^3.24.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "msgpackr-extract", "sharp"]
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/pg": "^8.11.11",
+    "drizzle-kit": "^0.30.6",
+    "tailwindcss": "^4.1.4",
+    "@tailwindcss/postcss": "^4.1.4",
+    "typescript": "^5",
+    "tsx": "^4.19.3"
+  }
+}
