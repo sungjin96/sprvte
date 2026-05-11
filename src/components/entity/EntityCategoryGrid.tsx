@@ -6,13 +6,14 @@ import { EmptyState } from '@/components/ui/EmptyState';
 interface EntityCategoryGridProps {
   entities: Entity[];
   projectId: string;
+  locale: string;
   onCreateInCategory?: (category: EntityCategory) => void;
 }
 
 // All categories to always display sections for
 const ALL_CATEGORIES: EntityCategory[] = ['character', 'map', 'item', 'ui', 'audio', 'effect'];
 
-function EntityCategoryGrid({ entities, projectId, onCreateInCategory }: EntityCategoryGridProps) {
+function EntityCategoryGrid({ entities, projectId, locale, onCreateInCategory }: EntityCategoryGridProps) {
   const byCategory = ALL_CATEGORIES.reduce<Record<EntityCategory, Entity[]>>(
     (acc, cat) => {
       acc[cat] = entities.filter((e) => e.category === cat);
@@ -61,7 +62,7 @@ function EntityCategoryGrid({ entities, projectId, onCreateInCategory }: EntityC
           {/* Entity cards */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
             {byCategory[cat].map((entity) => (
-              <EntityCard key={entity.id} entity={entity} projectId={projectId} />
+              <EntityCard key={entity.id} entity={entity} projectId={projectId} locale={locale} />
             ))}
           </div>
         </section>
