@@ -114,6 +114,7 @@ export const LAYER_TEMPLATES: Record<EntityCategory, LayerTemplate> = {
   map,
   item,
   ui,
+  audio: effect, // audio entities reuse effect layer template (no dedicated layers)
   effect,
 };
 

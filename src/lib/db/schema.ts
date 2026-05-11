@@ -25,6 +25,7 @@ export const assetTypeEnum = pgEnum("asset_type", [
   "sprite_sheet",
   "effect",
   "ambient",
+  "reference",
 ]);
 
 export const assetStatusEnum = pgEnum("asset_status", [

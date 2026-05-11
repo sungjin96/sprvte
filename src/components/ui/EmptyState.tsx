@@ -17,7 +17,7 @@ function EmptyState({ heading, body, cta, className, showMascot = true }: EmptyS
         <div className="w-24 h-24 mb-6 opacity-30">
           <Image
             src="/assets/mascot-full.svg"
-            alt="Spryte mascot"
+            alt="Sprvte mascot"
             width={96}
             height={64}
             className="w-full h-full object-contain"

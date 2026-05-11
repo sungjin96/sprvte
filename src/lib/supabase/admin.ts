@@ -28,7 +28,7 @@ export function createAdminClient(): SupabaseClient {
   if (typeof window !== 'undefined') {
     // Last-line defense: refuse to instantiate in the browser bundle, ever.
     throw new Error(
-      'Spryte: createAdminClient() must never be called in the browser. ' +
+      'Sprvte: createAdminClient() must never be called in the browser. ' +
       'Check your import path — use @/lib/supabase/client or /server instead.',
     );
   }
@@ -37,7 +37,7 @@ export function createAdminClient(): SupabaseClient {
   const key = process.env.SUPABASE_SECRET_KEY;
   if (!url || !key) {
     throw new Error(
-      'Spryte: NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SECRET_KEY (sb_secret_*) must be set in .env.',
+      'Sprvte: NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SECRET_KEY (sb_secret_*) must be set in .env.',
     );
   }
 

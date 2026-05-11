@@ -6,16 +6,17 @@ import { ENTITY_CATEGORY_SVG } from './categoryIcons';
 interface EntityCardProps {
   entity: Entity;
   projectId: string;
+  locale: string;
   className?: string;
 }
 
-function EntityCard({ entity, projectId, className }: EntityCardProps) {
+function EntityCard({ entity, projectId, locale, className }: EntityCardProps) {
   const icon = ENTITY_CATEGORY_SVG[entity.category];
   const label = ENTITY_CATEGORY_LABELS[entity.category] ?? entity.category;
 
   return (
     <Link
-      href={`/projects/${projectId}/entities/${entity.id}?category=${entity.category}`}
+      href={`/${locale}/projects/${projectId}/entities/${entity.id}?category=${entity.category}`}
       className={cn(
         'group relative flex flex-col gap-3 p-4 rounded-xl',
         'bg-[var(--g1)] border border-[var(--border-hi)]',

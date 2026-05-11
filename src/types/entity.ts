@@ -3,6 +3,7 @@ export type EntityCategory =
   | 'map'
   | 'item'
   | 'ui'
+  | 'audio'
   | 'effect';
 
 export type EntityMode = 'standard' | 'quality';
@@ -74,6 +75,7 @@ export const ENTITY_CATEGORY_LABELS: Record<EntityCategory, string> = {
   map:       'Maps',
   item:      'Items',
   ui:        'UI',
+  audio:     'Audio',
   effect:    'Effects',
 };
 
@@ -82,5 +84,6 @@ export const ENTITY_CATEGORY_ICONS: Record<EntityCategory, string> = {
   map:       '🗺️',
   item:      '⚔️',
   ui:        '🖼️',
+  audio:     '🎵',
   effect:    '✨',
 };

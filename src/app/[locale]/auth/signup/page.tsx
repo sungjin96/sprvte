@@ -82,7 +82,7 @@ export default function SignupPage() {
         <div className="text-center space-y-3">
           <div className="flex justify-center">
             <div className="w-[72px] h-[72px]">
-              <Image src="/assets/mascot-icon.svg" alt="Spryte" width={72} height={72} priority />
+              <Image src="/assets/mascot-icon.svg" alt="Sprvte" width={72} height={72} priority />
             </div>
           </div>
           <h1 className="text-[22px] font-semibold tracking-[-0.02em] text-[var(--text)]">
@@ -116,7 +116,7 @@ export default function SignupPage() {
       <div className="text-center space-y-3">
         <div className="flex justify-center">
           <div className="w-[72px] h-[72px]">
-            <Image src="/assets/mascot-icon.svg" alt="Spryte" width={72} height={72} priority />
+            <Image src="/assets/mascot-icon.svg" alt="Sprvte" width={72} height={72} priority />
           </div>
         </div>
         <div>

@@ -509,7 +509,7 @@ export default function SceneEditorPage({ params }: PageProps) {
         initialFirstSize={260}
         minFirst={180}
         maxFirst={400}
-        storageKey="spryte:scene:lib-width"
+        storageKey="sprvte:scene:lib-width"
       >
         {/* Library */}
         <aside className="border-r border-[var(--border)] bg-[var(--g1)] flex flex-col overflow-hidden h-full">
@@ -569,7 +569,7 @@ export default function SceneEditorPage({ params }: PageProps) {
           initialFirstSize={Math.max(400, (typeof window !== 'undefined' ? window.innerWidth : 1400) - 600)}
           minFirst={300}
           maxFirst={2400}
-          storageKey="spryte:scene:stage-width"
+          storageKey="sprvte:scene:stage-width"
         >
         {/* Stage */}
         <div className="flex flex-col overflow-hidden h-full">
@@ -637,7 +637,7 @@ export default function SceneEditorPage({ params }: PageProps) {
             initialFirstSize={280}
             minFirst={120}
             maxFirst={600}
-            storageKey="spryte:scene:layers-height"
+            storageKey="sprvte:scene:layers-height"
           >
             {/* Layers panel — top */}
             <ScenePlacementsPanel

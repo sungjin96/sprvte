@@ -114,7 +114,7 @@ export function AdminShell({ locale, children }: AdminShellProps) {
           <Link href={base} className="block group">
             <Image
               src="/assets/mascot-full.svg"
-              alt="Spryte"
+              alt="Sprvte"
               width={188}
               height={35}
               priority

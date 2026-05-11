@@ -46,8 +46,8 @@ const MOCK_ENTITY_REGISTRY: Record<string, MockEntityInfo> = {
   'ent-2':              { id: 'ent-2',              name: 'Mage Zephyr',     category: 'character', mode: 'standard' },
   'ent-3':              { id: 'ent-3',              name: 'Dark Forest',     category: 'map',       mode: 'quality' },
   'ent-4':              { id: 'ent-4',              name: 'Flame Sword',     category: 'item',      mode: 'standard' },
-  'ent-pixel-test-1':   { id: 'ent-pixel-test-1',   name: 'Spryte Sentinel', category: 'character', mode: 'quality',  flatImageUrl: '/test-fixtures/spryte-sentinel.png' },
-  'ent-pixel-test-2':   { id: 'ent-pixel-test-2',   name: 'Spryte Scout',    category: 'character', mode: 'standard', flatImageUrl: '/test-fixtures/spryte-scout.png' },
+  'ent-pixel-test-1':   { id: 'ent-pixel-test-1',   name: 'Sprvte Sentinel', category: 'character', mode: 'quality',  flatImageUrl: '/test-fixtures/spryte-sentinel.png' },
+  'ent-pixel-test-2':   { id: 'ent-pixel-test-2',   name: 'Sprvte Scout',    category: 'character', mode: 'standard', flatImageUrl: '/test-fixtures/spryte-scout.png' },
 };
 
 function resolveEntity(entityId: string): MockEntityInfo {
@@ -483,7 +483,7 @@ export default function EntityWorkspacePage({ params }: EntityWorkspacePageProps
         initialLeftWidth={320}
         minLeft={260}
         maxLeft={560}
-        storageKey="spryte:entity-workspace:left-width"
+        storageKey="sprvte:entity-workspace:left-width"
       >
         {left}
         {right}
