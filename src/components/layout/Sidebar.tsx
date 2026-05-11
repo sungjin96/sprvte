@@ -64,7 +64,7 @@ function Sidebar({ locale, userName = 'User', userPlan = 'Free', navItems, entit
       <div className="px-4 pt-5 pb-5 border-b border-[var(--border)] flex items-center justify-center">
         <Image
           src="/assets/mascot-full.svg"
-          alt="Spryte"
+          alt="Sprvte"
           width={188}
           height={35}
           priority

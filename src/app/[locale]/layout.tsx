@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Spryte',
+  title: 'Sprvte',
   description: 'AI-powered game asset generation',
 };
 
