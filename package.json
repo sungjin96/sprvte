@@ -9,33 +9,57 @@
     "lint": "next lint",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
-    "worker": "tsx watch src/workers/assetWorker.ts"
+    "db:apply-functions": "tsx scripts/apply-sql.ts drizzle/9999_v5_functions_triggers_rls.sql",
+    "db:seed": "tsx scripts/apply-sql.ts drizzle/9998_v5_models_seed.sql",
+    "db:setup-storage": "tsx scripts/setup-storage.ts",
+    "worker": "tsx watch src/workers/assetWorker.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
-    "next": "15.3.1",
+    "@supabase/ssr": "^0.10.2",
+    "@supabase/supabase-js": "^2.105.0",
+    "bullmq": "^5.38.0",
+    "clsx": "^2.1.1",
+    "drizzle-orm": "^0.41.0",
+    "image-q": "4.0.0",
+    "ioredis": "^5.4.2",
+    "konva": "^10.2.5",
+    "next": "16.2.4",
+    "next-intl": "^4.9.1",
+    "openai": "^6.37.0",
+    "pg": "^8.13.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "drizzle-orm": "^0.41.0",
-    "pg": "^8.13.3",
-    "bullmq": "^5.38.0",
-    "ioredis": "^5.4.2",
+    "react-konva": "^19.2.3",
     "replicate": "^1.0.1",
     "sharp": "^0.33.5",
+    "tailwind-merge": "^3.5.0",
+    "tone": "^15.1.22",
+    "wavesurfer.js": "^7.12.6",
     "zod": "^3.24.3"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild", "msgpackr-extract", "sharp"]
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "msgpackr-extract",
+      "sharp"
+    ]
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
     "@types/node": "^22",
+    "@types/pg": "^8.11.11",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@types/pg": "^8.11.11",
+    "@vitejs/plugin-react": "^6.0.1",
+    "dotenv": "^17.4.2",
     "drizzle-kit": "^0.30.6",
     "tailwindcss": "^4.1.4",
-    "@tailwindcss/postcss": "^4.1.4",
+    "tsx": "^4.19.3",
     "typescript": "^5",
-    "tsx": "^4.19.3"
+    "vitest": "^4.1.5"
   }
 }

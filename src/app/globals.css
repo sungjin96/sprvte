@@ -1,1 +1,91 @@
 @import "tailwindcss";
+
+/* ─── Design Tokens ─────────────────────────────────────────── */
+:root {
+  /* Background */
+  --bg: #050507;
+
+  /* Glass surfaces — bumped opacity so cards are visible on near-black bg */
+  --g1: rgba(255, 255, 255, 0.045);
+  --g2: rgba(255, 255, 255, 0.075);
+  --g3: rgba(255, 255, 255, 0.11);
+
+  /* Borders — stronger so card outlines & dividers actually show */
+  --border:    rgba(255, 255, 255, 0.10);
+  --border-hi: rgba(255, 255, 255, 0.18);
+
+  /* Text */
+  --text:   #ffffff;
+  --text-2: rgba(255, 255, 255, 0.50);
+  --text-3: rgba(255, 255, 255, 0.28);
+
+  /* Accent — #00E5A0 "Cyber" — use sparingly */
+  --neon:      #00E5A0;
+  --neon-dim:  rgba(0, 229, 160, 0.12);
+  --neon-glow: rgba(0, 229, 160, 0.35);
+  --neon-ring: rgba(0, 229, 160, 0.06);
+
+  /* Radius */
+  --r-sm: 8px;
+  --r-md: 10px;
+  --r-lg: 12px;
+  --r-xl: 14px;
+}
+
+/* ─── Base ───────────────────────────────────────────────────── */
+/* NOTE: Tailwind v4 preflight already normalizes margin/padding/box-sizing.
+   A universal `* { margin: 0; padding: 0 }` reset would override Tailwind's
+   spacing utilities (p-*, m-*, gap-*, space-*) due to specificity, so we omit it. */
+html, body {
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 0%,  rgba(0, 229, 160, 0.045), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 100% 100%, rgba(120, 80, 255, 0.04), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.20);
+}
+
+/* ─── Glass utility ──────────────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* ─── Focus ring ─────────────────────────────────────────────── */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--neon-ring), 0 0 0 3px rgba(0, 229, 160, 0.3);
+}
+
+/* ─── Selection ──────────────────────────────────────────────── */
+::selection {
+  background: var(--neon-dim);
+  color: var(--neon);
+}
