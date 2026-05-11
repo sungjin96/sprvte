@@ -1,3 +1,6 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { Entity, EntityCategory, ENTITY_CATEGORY_LABELS } from '@/types/entity';
 import { ENTITY_CATEGORY_SVG } from './categoryIcons';
 import { EntityCard } from './EntityCard';
@@ -14,6 +17,7 @@ interface EntityCategoryGridProps {
 const ALL_CATEGORIES: EntityCategory[] = ['character', 'map', 'item', 'ui', 'audio', 'effect'];
 
 function EntityCategoryGrid({ entities, projectId, locale, onCreateInCategory }: EntityCategoryGridProps) {
+  const t = useTranslations('entities');
   const byCategory = ALL_CATEGORIES.reduce<Record<EntityCategory, Entity[]>>(
     (acc, cat) => {
       acc[cat] = entities.filter((e) => e.category === cat);
@@ -28,8 +32,8 @@ function EntityCategoryGrid({ entities, projectId, locale, onCreateInCategory }:
   if (entities.length === 0) {
     return (
       <EmptyState
-        heading="No entities yet"
-        body="Create your first entity — a folder of related assets sharing the same identity."
+        heading={t('empty')}
+        body={t('emptyBody')}
       />
     );
   }
