@@ -17,3 +17,11 @@ storage/
 # misc
 .DS_Store
 *.log
+
+# build / tooling artifacts
+tsconfig.tsbuildinfo
+.playwright-mcp/
+
+# claude code (local-only)
+.claude/worktrees/
+.claude/settings.local.json
